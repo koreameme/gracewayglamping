@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
 
     // Apps Script 웹 앱 URL (배포 후 이곳에 붙여넣기)
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7_dEEBr3WhFS92rQU47jbWx2SacGcceEPMag8hXQcmeXk0EIjhPnI_6jW1sJDNNmB/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9iH1-RMPP4xsvSHx1xAy40JHuVCRRUQyPRlhruhfbMRGXdYcDK6oq3s5cCJcrSXdZ/exec';
 
     glampingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // Apps Script의 CORS 제한 때문
+                    mode: 'no-cors', // Apps Script의 CORS 제한 우회
                     cache: 'no-cache',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'text/plain', // application/json 대신 text/plain 사용
                     },
                     body: JSON.stringify(data),
                 });
