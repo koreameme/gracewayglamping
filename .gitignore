@@ -1,0 +1,6 @@
+# Google Apps Script 백엔드 코드는 깃허브에 올리지 않습니다 (보안 위험)
+backend.gs
+
+# 기타 불필요한 설정 파일
+.gemini/
+*.log

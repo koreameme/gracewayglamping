@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은혜로교회 | 글램핑 사용 신청</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="http://www.graceway.or.kr/img/logo.png" alt="은혜로교회 로고" onerror="this.src='https://via.placeholder.com/150x50?text=GRACEWAY+CHURCH'">
+            </div>
+            <h1>[글램핑사용신청안내]</h1>
+            <div class="notice-box">
+                <p>은혜로 교회 글램핑 사용을 체계적이고 원활히 운영하기 위해 신청을 받아 사용하오니,</p>
+                <p>사용을 원하는 부서는 아래에 신청하시고 궁금하시거나 문의사항이 있으시면</p>
+                <p>기획위원회 체육부 부장 <strong>한용석 집사</strong>에게 연락하시기 바랍니다.</p>
+                <div class="contact">
+                    <span>한용석 집사 :</span>
+                    <a href="tel:010-3604-8657" class="phone-link">010-3604-8657</a>
+                </div>
+            </div>
+        </header>
+
+        <form id="glampingForm" class="form-card">
+            <div class="form-group">
+                <label for="applicant">신청인 <span class="required">*</span></label>
+                <input type="text" id="applicant" name="applicant" required placeholder="이름을 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="department">신청부서 <span class="required">*</span></label>
+                <input type="text" id="department" name="department" required placeholder="부서명을 입력하세요">
+            </div>
+
+            <div class="form-group date-range">
+                <label>사용기간 <span class="required">*</span></label>
+                <div class="datetime-inputs">
+                    <div class="start-end">
+                        <span class="label-inline">시작:</span>
+                        <input type="datetime-local" id="startTime" name="startTime" required>
+                    </div>
+                    <div class="start-end">
+                        <span class="label-inline">종료:</span>
+                        <input type="datetime-local" id="endTime" name="endTime" required>
+                    </div>
+                </div>
+                <p class="helper-text">※ 신청 기간을 정확히 선택해 주세요.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">전화번호 <span class="required">*</span></label>
+                <div class="phone-inputs">
+                    <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="applicationDate">날짜</label>
+                <input type="date" id="applicationDate" name="applicationDate">
+            </div>
+
+            <div class="button-area">
+                <button type="submit" id="submitBtn">신청하기</button>
+            </div>
+        </form>
+
+        <footer>
+            <p>&copy; 2026 은혜로교회 GraceWay Church. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>신청 완료</h2>
+            <p>글램핑 사용 신청이 정상적으로 접수되었습니다.</p>
+            <p>관리자의 승인을 기다려주세요.</p>
+            <button onclick="closeModal()">확인</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
