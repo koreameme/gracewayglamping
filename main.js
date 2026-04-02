@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
 
     // Apps Script 웹 앱 URL (배포 후 이곳에 붙여넣기)
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9iH1-RMPP4xsvSHx1xAy40JHuVCRRUQyPRlhruhfbMRGXdYcDK6oq3s5cCJcrSXdZ/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwggMR3WKKxaIh7s4JeLFkUpoNiDiCI59Zh7wf8IHzCAfCA0SsrMokbJBUfvhLO1dwU/exec';
 
     glampingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
